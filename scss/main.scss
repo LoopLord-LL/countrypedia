@@ -10,6 +10,67 @@ body {
   padding: 40px;
 }
 
+header {
+  padding-bottom: 40px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    &:hover {
+      h1 {
+        color: #385e9c;
+      }
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    h1 {
+      font-size: 36px;
+      color: #3b9dff;
+      text-shadow: 2px 2px 4px rgba(39, 118, 255, 0.3);
+    }
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      width: 300px;
+      font-size: 16px;
+      color: #334155;
+      background-color: #f1f5f9;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #27639f;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #385e9c;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -126,7 +187,43 @@ body {
     transform: scale(1);
   }
 }
+@media screen and (max-width: 1200px) {
+  header {
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
 
+    .title {
+      flex: 1 1 auto; 
+      justify-content: center; 
+      text-align: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    .search-container {
+      flex: 1 1 auto; 
+      justify-content: center; 
+      width: 100%; 
+
+      input {
+        width: 100%; 
+        max-width: 400px; 
+      }
+
+      button {
+        width: auto; 
+      }
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .cards-container {
     padding: 20px;

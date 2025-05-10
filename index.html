@@ -4,17 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countries</title>
+    <link rel="icon" href="./assets/web-icon.jpeg" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div class="cards-container"></div>
+    <header>
+      <div class="title">
+        <img src="./assets/web-icon.jpeg" alt="globe icone" />
+        <h1>COUNTRYPEDIA</h1>
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for a country..."
+        />
+        <button id="searchButton">Search</button>
+      </div>
+    </header>
 
+    <div class="cards-container"></div>
     <div class="modal" id="countryModal">
-      <div class="modal-content"> 
+      <div class="modal-content">
         <span class="close">&times;</span>
         <div id="modalDetails"></div>
       </div>
     </div>
     <script src="main.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>
